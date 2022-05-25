@@ -1,15 +1,36 @@
+const path = require("path");
+
 module.exports = {
-  "stories": [
+  stories: [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@storybook/preset-scss",
+    "@storybook/preset-typescript"
   ],
-  "framework": "@storybook/vue3",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
+  framework: "@storybook/vue3",
+  core: {
+    builder: "@storybook/builder-webpack5"
+  },
+  webpackFinal: async (config, { configType }) => {
+    /*config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+      include: path.resolve(__dirname, '../'),
+    });*/
+    config.module.rules.push({
+      test: /\.mjs$/,
+      resolve: {
+        fullySpecified: false,
+      },
+      include: /node_modules/,
+      type: "javascript/auto",
+    });
+
+    return config;
   }
 }

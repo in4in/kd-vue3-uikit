@@ -1,6 +1,6 @@
 <template>
   <el-button v-bind="$props">
-    <slot />
+    <slot>{{ $props.text }}</slot>
   </el-button>
 </template>
 
@@ -11,11 +11,16 @@ export default {
   name: "KdButton",
   components: { ElButton },
   props: {
+    text: {
+      type: String,
+      required: false,
+      default: "",
+    },
     size: {
       type: String,
       required: false,
       default: "",
-      validator: (value: string) => ["large", "small", ""].includes(value),
+      validator: (value: string) => ["large", "medium", "small", "small", "mini", ""].includes(value),
     },
     type: {
       type: String,
@@ -42,9 +47,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$color: green;
-* {
-  color: $color;
-}
+<style lang="scss">
+@import "../../assets/scss/components/button.scss";
 </style>

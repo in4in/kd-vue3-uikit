@@ -1549,7 +1549,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-controls@6.5.5":
+"@storybook/addon-controls@6.5.5", "@storybook/addon-controls@^6.5.5":
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-controls/-/addon-controls-6.5.5.tgz#157348019f532a39081aba507eaa844cbe11ec2c"
   integrity sha512-uazzNUxz8LKcjZIYD5sE49HK6VS1SOi7YHFQy/u2e4MFx4M1sntY4JZ98bDZKEDr/94kAX+FBuL1PkJ8IKoY2g==

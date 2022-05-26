@@ -1,0 +1,13 @@
+{
+  "source": ["src/tokens/transform.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "src/assets/scss/base/",
+      "files": [{
+        "destination": "_variables.scss",
+        "format": "scss/variables"
+      }]
+    }
+  }
+}

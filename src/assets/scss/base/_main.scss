@@ -1,0 +1,12 @@
+@use '_variables.scss' as *;
+@use '~element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'success': (
+      'base': $background-brand-high-default,
+    ),
+  ),
+  $border-radius: (
+    'round': $border-radius-pill,
+  ),
+);
+@use '~element-plus/theme-chalk/src/var.scss' as *;

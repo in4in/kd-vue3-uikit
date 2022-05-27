@@ -1,1 +1,2 @@
-@use "~element-plus/theme-chalk/src/var.scss";
+@forward "~element-plus/theme-chalk/src/var";
+@forward "_variables";

@@ -1,0 +1,25 @@
+{
+  "source": ["src/tokens/transform.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "transforms": [
+        "resolveMath",
+        "size/px",
+        "size/letterspacing",
+        "type/fontWeight",
+        "color/hexrgba",
+        "color/lowercase",
+        "font/quotes",
+        "typography/shorthand",
+        "shadow/shorthand",
+        "name/cti/kebab"
+      ],
+      "buildPath": "src/assets/scss/base/",
+      "files": [{
+        "destination": "_variables.scss",
+        "format": "scss/variables"
+      }]
+    }
+  }
+}

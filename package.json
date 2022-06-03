@@ -1,7 +1,8 @@
 {
   "name": "kd-vue3-uikit",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "uikit for vue3",
+  "private": false,
   "author": {
     "name": "Fedor Inchin",
     "email": "in4in@mail.ru"
@@ -13,7 +14,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "token-style": "node style-dictionary.js",
-    "token-transform": "./node_modules/.bin/token-transformer src/tokens/tokens.json src/tokens/transform.json global,theme"
+    "token-transform": "./node_modules/.bin/token-transformer src/tokens/tokens.json src/tokens/transform.json global,theme",
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "main": "index.js",
   "dependencies": {
@@ -47,6 +49,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.5.6",
     "color2k": "^2.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
@@ -84,7 +87,20 @@
     "not dead",
     "not ie 11"
   ],
-  "_id": "kd-vue3-uikit@1.0.0",
-  "license": "MIT",
-  "readme": "ERROR: No README data found!"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/in4in/kd-vue3-uikit.git"
+  },
+  "keywords": [
+    "uikit"
+  ],
+  "bugs": {
+    "url": "https://github.com/in4in/kd-vue3-uikit/issues"
+  },
+  "homepage": "https://github.com/in4in/kd-vue3-uikit#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
 }
